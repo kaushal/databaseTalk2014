@@ -18,7 +18,11 @@ def process():
     prodId = random.choice(range(3000, 80000))
     order  = request.args['order']
 
-    dbEntry = {'amount': amount, 'prodId': prodId, 'order': order}
+    dbEntry = {
+        'amount': amount,
+        'prodId': prodId,
+        'order': order,
+    }
 
     db.gerlandas.insert(dbEntry)
 
